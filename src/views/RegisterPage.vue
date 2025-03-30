@@ -2,7 +2,7 @@
   <div class="w-full h-screen bg-gradient-to-t from-black to-[#005A46]">
     <div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img class="mx-auto -my-16 h-50 w-auto" src="@/assets/MidnightLogo.svg" alt="Your Company" />
+        <!-- <img class="mx-auto -my-16 h-50 w-auto" src="@/assets/MidnightLogo.svg" alt="Your Company" /> -->
         <h2 class="-mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Daftar dulu Yuk!
         </h2>
       </div>
@@ -12,7 +12,7 @@
           <div>
             <label for="email" class="block text-sm font-medium leading-6 text-white">Email</label>
             <div class="mt-2">
-              <input id="email" name="email" type="email" autocomplete="email" required=""
+              <input id="email" name="email" type="email" autocomplete="email" required
                 class="block w-full rounded-md border-0 bg-white/5 py-1.5 px-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
             </div>
           </div>
@@ -22,14 +22,14 @@
               <label for="password" class="block text-sm font-medium leading-6 text-white">Password</label>
             </div>
             <div class="mt-2">
-              <input id="password" name="password" type="password" autocomplete="current-password" required=""
+              <input id="password" name="password" type="password" autocomplete="current-password" required
                 class="block w-full rounded-md border-0 bg-white/5 py-1.5 px-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
             </div>
             <div class="flex items-center justify-between mt-2">
               <label for="password" class="block text-sm font-medium leading-6 text-white">Konfirmasi Password</label>
             </div>
             <div class="mt-2">
-              <input id="password" name="password" type="password" autocomplete="current-password" required=""
+              <input id="password" name="password" type="password" autocomplete="current-password" required
                 class="block w-full rounded-md border-0 bg-white/5 py-1.5 px-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
             </div>
           </div>
