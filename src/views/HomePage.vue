@@ -57,7 +57,7 @@
                     :style="{ backgroundImage: `url(${banner.image})`, height: '100vh' }">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
                     <div class="absolute bottom-20 left-5 max-w-md">
-                        <h2 class="text-5xl font-bold">{{ banner.title }}</h2>
+                        <h2 class="text-4xl font-bold">{{ banner.title }}</h2>
                         <p class="mt-4">{{ banner.description }}</p>
                         <button class="mt-6 bg-[#481E62] text-white font-bold px-6 py-2 rounded">Play</button>
                     </div>
@@ -110,7 +110,7 @@ export default {
     data() {
         return {
             banners: [
-                { image: BGHOME, title: 'Money Heist', description: "Lives are on the line as the Professor's plan begins to unravel." },
+                { image: BGHOME, title: 'Pahlawan Kecil', description: "Lives are on the line as the Professor's plan begins to unravel." },
                 { image: BGHOME, title: 'Stranger Things', description: 'Mysteries unfold in the small town of Hawkins.' },
                 { image: BGHOME, title: 'The Witcher', description: 'A monster hunter navigates a world full of beasts and betrayals.' }
             ],
