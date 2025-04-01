@@ -3,7 +3,7 @@
         <div class="p-6 w-full bg-black text-white rounded-2xl shadow-lg">
             <!-- Header Back Button -->
             <div class="max-w-screen-xl mx-auto mb-4 flex items-center">
-                <button @click="" class="text-white text-3xl py-2 rounded-lg flex items-center">
+                <button @click="$router.go(-1)" class="text-white text-3xl py-2 rounded-lg flex items-center">
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </button>
             </div>
@@ -26,7 +26,7 @@
                 <div class="mt-6 max-w-screen-xl">
                     <h3 class="text-xl font-semibold">Season 1</h3>
                     <div class="flex items-start mt-4 space-x-4">
-                        <img :src="movie.poster" :alt="movie.title" class="w-40 h-80 object-cover rounded-lg">
+                        <img :src="movie.poster" :alt="movie.title" class="w-45 h-80 object-cover rounded-lg">
                         <div>
                             <h2 class="text-md font-bold">{{ movie.title }}</h2>
                             <p class="text-gray-400 text-sm">{{ movie.shortDescription }}</p>
@@ -38,7 +38,8 @@
                                 </div>
 
                                 <!-- Tombol Watchlist -->
-                                <button class="text-white py-2 px-2 rounded-lg flex flex-row items-center gap-1 border border-white hover:bg-[#481E62] hover:border-0 hover:font-bold ">
+                                <button
+                                    class="text-white py-2 px-2 rounded-lg flex flex-row items-center gap-1 border border-white hover:bg-[#481E62] hover:border-0 hover:font-bold ">
                                     <ion-icon name="add-outline"></ion-icon>
                                     <span class="text-xs mx-1">Watchlist</span>
                                 </button>
@@ -95,6 +96,7 @@
 
 import POSTER1 from "@/assets/BGHOME.jpg";
 import POSTER2 from "@/assets/Ne_Zha_2_Poster.jpg";
+
 export default {
     data() {
         return {
