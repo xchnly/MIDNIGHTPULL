@@ -68,26 +68,59 @@
             <!-- Karya Serupa -->
             <div class="mt-8 max-w-screen-xl mx-auto">
                 <h3 class="text-xl font-semibold">Karya Film Serupa</h3>
-                <div class="mt-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
-                    <div class="inline-flex space-x-4">
-                        <div v-for="similar in movie.similarMovies" :key="similar.title" class="w-40 flex-shrink-0">
-                            <img :src="similar.poster" :alt="similar.title" class="w-full h-56 object-cover rounded-lg">
+                <div class="relative">
+                    <!-- Tombol Kiri -->
+                    <button @click="scrollLeft('similar-scroll')"
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2  shadow-md p-2 rounded-full z-10">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    </button>
+
+                    <!-- Scroll Container -->
+                    <div id="similar-scroll"
+                        class="mt-2 overflow-x-auto whitespace-nowrap scrollbar-hide scroll-smooth">
+                        <div class="inline-flex space-x-4">
+                            <div v-for="similar in movie.similarMovies" :key="similar.title" class="w-40 flex-shrink-0">
+                                <img :src="similar.poster" :alt="similar.title"
+                                    class="w-full h-56 object-cover rounded-lg">
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Tombol Kanan -->
+                    <button @click="scrollRight('similar-scroll')"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 shadow-md p-2 rounded-full z-10">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
                 </div>
             </div>
 
             <!-- Karya Iklan -->
             <div class="mt-8 max-w-screen-xl mx-auto">
                 <h3 class="text-xl font-semibold">Karya Iklan</h3>
-                <div class="mt-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
-                    <div class="inline-flex space-x-4">
-                        <div v-for="ad in movie.ads" :key="ad.title" class="w-40 flex-shrink-0">
-                            <img :src="ad.poster" :alt="ad.title" class="w-full h-56 object-cover rounded-lg">
+                <div class="relative">
+                    <!-- Tombol Kiri -->
+                    <button @click="scrollLeft('ads-scroll')"
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 shadow-md p-2 rounded-full z-10">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    </button>
+
+                    <!-- Scroll Container -->
+                    <div id="ads-scroll" class="mt-2 overflow-x-auto whitespace-nowrap scrollbar-hide scroll-smooth">
+                        <div class="inline-flex space-x-4">
+                            <div v-for="ad in movie.ads" :key="ad.title" class="w-40 flex-shrink-0">
+                                <img :src="ad.poster" :alt="ad.title" class="w-full h-56 object-cover rounded-lg">
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Tombol Kanan -->
+                    <button @click="scrollRight('ads-scroll')"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 shadow-md p-2 rounded-full z-10">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -136,9 +169,20 @@ export default {
                     { title: "Ad 10", poster: POSTER1 }
                 ]
             }
+        };
+    },
+    methods: {
+        scrollLeft(id) {
+            const el = document.getElementById(id);
+            el.scrollBy({ left: -300, behavior: 'smooth' });
+        },
+        scrollRight(id) {
+            const el = document.getElementById(id);
+            el.scrollBy({ left: 300, behavior: 'smooth' });
         }
     }
 };
+
 </script>
 
 <style scoped>

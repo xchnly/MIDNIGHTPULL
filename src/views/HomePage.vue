@@ -11,13 +11,13 @@
               <input 
                 ref="searchInput"
                 type="text" 
-                placeholder="Cari film, acara TV, artis..." 
-                class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none w-64"
+                placeholder="Cari Karya, Film, atau Judul" 
+                class="bg-black text-white px-4 py-2 rounded-l focus:outline-none w-64"
                 v-model="searchQuery"
                 @keyup.enter="performSearch">
               <button 
                 @click="closeSearch"
-                class="bg-gray-700 text-white px-3 py-2">
+                class="bg-[#481E62] text-white px-3 py-2">
                 <ion-icon name="close-outline"></ion-icon>
               </button>
             </div>
@@ -147,7 +147,7 @@
   
   <script>
   import POSTER1 from '@/assets/BGHOME.jpg';
-  import POSTER2 from '@/assets/Ne_Zha_2_Poster.jpg';
+  import POSTER2 from '@/assets/POSTER3.svg';
   
   export default {
     data() {
