@@ -4,6 +4,9 @@ import LoginPage from '../views/LoginPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import HomePage from '../views/HomePage.vue'
 import PreviewPage from '../views/PreviewPage.vue'
+import UserPage from '../views/UserPage.vue'
+import HelpPage from '../views/HelpPage.vue'
+import WatchlistPage from '../views/WatchlistPage.vue'
 
 const routes = [
   {
@@ -30,6 +33,21 @@ const routes = [
     path: '/preview',
     name: 'Preview',
     component: PreviewPage
+  },
+  {
+    path: '/user',
+    name : 'User',
+    component:  UserPage
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: HelpPage
+  },
+  {
+    path: '/watchlist',
+    name: 'Watchlist',
+    component: WatchlistPage
   }
 ]
 
